@@ -1,0 +1,28 @@
+{
+  "name": "weather-server-crazy",
+  "version": "1.0.0",
+  "description": "server for getting weather",
+  "keywords": [
+    "server",
+    "weather"
+  ],
+  "license": "ISC",
+  "author": "artcryptorg",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "weather.js",
+  "bin": {
+    "weather": "server.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2"
+  }
+}

@@ -30,7 +30,7 @@ TOKEN="your-telegram-bot-token"
 Start the bot with:
 
 ```bash
-npm start
+npm ci start && npm start
 ```
 
 ---

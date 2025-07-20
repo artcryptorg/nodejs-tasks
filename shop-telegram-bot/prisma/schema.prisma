@@ -20,6 +20,7 @@ model User {
   address    String
   zipCode    String
   country    String
+  name       String
   cartItems  CartItem[]
   orders     Order[]
   createdAt  DateTime   @default(now())
@@ -43,6 +44,7 @@ model ProductVariant {
   price      Float
   currency   String      @default("USD")
   imageUrl   String
+  stock      Int         @default(1)
   cartItems  CartItem[]
   orderItems OrderItem[]
 }

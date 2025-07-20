@@ -7,23 +7,43 @@
     "bot"
   ],
   "prisma": {
-    "seed": "node prisma/seed.js"
+    "seed": "ts-node prisma/seed.ts"
   },
   "license": "ISC",
   "author": "alex",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./start.js",
-    "seed": "node prisma/seed.js"
+    "start": "node ./build/main.js",
+    "build": "tsc",
+    "lint": "eslint ./src/**",
+    "lint:fix": "eslint ./src/** --fix",
+    "seed": "node prisma/seed.ts",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.6.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "dotenv": "^16.5.0",
-    "telegraf": "^4.16.3"
+    "reflect-metadata": "^0.2.2",
+    "telegraf": "^4.16.3",
+    "tslog": "^4.9.3"
   },
   "devDependencies": {
-    "prisma": "^6.6.0"
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/parser": "^8.30.1",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "prisma": "^6.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1"
   }
 }
